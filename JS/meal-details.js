@@ -1,7 +1,10 @@
 //function to fetch details of selected meal
-console.log('meals page js')
-const ID = 52772;
-const Category = "Seafood";
+sessionStorage.setItem("currentPage", "meals");
+console.log("meals page js", sessionStorage.getItem("currentPage"));
+// selectedMealId
+// selectedMeal
+const ID = sessionStorage.getItem("selectedMealId");
+
 async function getMealDetails() {
   try {
     const response = await fetch(
@@ -34,18 +37,20 @@ getMealDetails().then((mealDetails) => {
   }
   //meal tags
   const mealTag = document.getElementById("mealTag");
-  let mealTags = mealDetails.strTags.split(",");
-  for (let i of mealTags) {
-    const tagEl = document.createElement("span");
-    tagEl.className = "item-tag";
-    tagEl.textContent = i;
-    mealTag.append(tagEl);
+  if (mealDetails.strTags) {
+    let mealTags = mealDetails.strTags.split(",");
+    for (let i of mealTags) {
+      const tagEl = document.createElement("span");
+      tagEl.className = "item-tag";
+      tagEl.textContent = i;
+      mealTag.append(tagEl);
+    }
   }
 
   //meal ingredients
   const mealIngredients = document.getElementById("mealIngredients");
   for (let i of Object.entries(mealDetails)) {
-    if (i[0].startsWith("strIngredient") && i[1]) {
+    if ((i[0].startsWith("strIngredient")) && (i[1].trim())) {
       const ingredient = document.createElement("li");
       ingredient.className = "list-ord-item";
       ingredient.textContent = i[1];
@@ -53,10 +58,10 @@ getMealDetails().then((mealDetails) => {
     }
   }
 
-    //meal measure
+  //meal measure
   const mealMesures = document.getElementById("mealMesures");
   for (let i of Object.entries(mealDetails)) {
-    if (i[0].startsWith("strMeasure") && i[1]) {
+    if ((i[0].startsWith("strMeasure")) && (i[1].trim())) {
       const measure = document.createElement("li");
       measure.className = "list-unord-item";
       measure.textContent = i[1];

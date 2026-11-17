@@ -38,7 +38,7 @@ getMealCategories().then((categoryList) => {
       if (sessionStorage.getItem("currentPage") == "index") {
         console.log("11111111111111", sessionStorage.getItem("currentPage"));
         newAnchor.setAttribute("href", "./pages/category.html");
-      } else if (sessionStorage.getItem("currentPage") == "category") {
+      } else {
         console.log("222222222222222", sessionStorage.getItem("currentPage"));
         newAnchor.setAttribute("href", "./category.html");
       }
@@ -68,8 +68,7 @@ getMealCategories().then((categoryList) => {
     });
     if (sessionStorage.getItem("currentPage") == "index") {
       aTag.setAttribute("href", "./pages/category.html");
-    }
-    if (sessionStorage.getItem("currentPage") == "category") {
+    } else {
       aTag.setAttribute("href", "./category.html");
     }
     //creating new img tag

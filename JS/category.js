@@ -1,6 +1,6 @@
 //function to fetch details of selected category to be displayed after navigating
 sessionStorage.setItem("currentPage", "category");
-console.log('category page js',sessionStorage.getItem("currentPage"))
+console.log("category page js", sessionStorage.getItem("currentPage"));
 async function getCategoryDetails() {
   try {
     let category = sessionStorage.getItem("selectedCategory");
@@ -33,7 +33,12 @@ getCategoryDetails().then((mealDetails) => {
     outerDiv.classList.add("category-card", "card-alignment");
     //anchor element
     const aTag = document.createElement("a");
+    aTag.addEventListener("click", (e) => {
+      sessionStorage.setItem("selectedMealId", i.idMeal);
+      sessionStorage.setItem("selectedMeal", i.strMeal);
+    });
     aTag.setAttribute("href", "./meal-details.html");
+
     //img element
     const imgTag = document.createElement("img");
     imgTag.className = "card-img-veg";
