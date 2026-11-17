@@ -66,54 +66,10 @@
             </div>
             <!-- sidebar list -->
             <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Beef</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Chicken</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Dessert</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Lamb</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#"
-                    >Miscellaneous</a
-                  >
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Pasta</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Pork</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Seafood</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Side</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Starter</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Vegan</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#"
-                    >Vegetarian</a
-                  >
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Breakfast</a>
-                </li>
-                <li class="nav-item horz-divider">
-                  <a class="nav-link" aria-current="page" href="#">Goat</a>
-                </li>
-              </ul>
+              <ul
+                id="sidebarCategoryList"
+                class="navbar-nav justify-content-end flex-grow-1 pe-3"
+              ></ul>
             </div>
           </div>
         </div>
@@ -151,9 +107,11 @@
           <li class="breadcrumb-item">
             <a href="../index.html"><i class="fa-solid fa-house"></i></a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">
-            BAINGAN BHARTA
-          </li>
+          <li
+            id="breadcrumbHeader"
+            class="breadcrumb-item active"
+            aria-current="page"
+          ></li>
         </ol>
       </nav>
     </section>
@@ -170,31 +128,25 @@
           />
         </div>
         <div class="col-md-7 col-sm-7 col-xs-7">
-          <h4 class="desc-heading">Baingan Bharta</h4>
+          <h4 id="breadcrumbHeader" class="desc-heading"></h4>
           <div class="sub-underline"></div>
 
           <div>
             <span class="item-head">CATEGORY:</span>
-            <span class="item-value">VEGETARIAN</span>
+            <span id="mealCategory" class="item-value"></span>
           </div>
           <div>
             <span class="item-head">Source:</span>
-            <span class="truncate-text"
-              >http://www.vegrecipiesofindia.com/bainganbharta</span
-            >
+            <span id="mealSource" class="truncate-text"></span>
           </div>
           <div class="item-tag-outer">
             <span class="item-head">Tags:</span>
-            <span>
-              <span class="item-tag">Spicy</span>
-              <span class="item-tag">Bun</span>
-              <span class="item-tag">Calorific</span>
-            </span>
+            <span id="mealTag"> </span>
           </div>
           <div class="item-color-card">
             <span class="item-head">Ingredients</span>
-            <ol class="list-ord">
-              <li class="list-ord-item">Aubergine</li>
+            <ol id="mealIngredients" class="list-ord">
+              <!-- <li class="list-ord-item">Aubergine</li>
               <li class="list-ord-item">Onion</li>
               <li class="list-ord-item">Tomatoes</li>
               <li class="list-ord-item">Garlic</li>
@@ -202,75 +154,33 @@
               <li class="list-ord-item">Red Chilli Powder</li>
               <li class="list-ord-item">Oil</li>
               <li class="list-ord-item">Coriander Leaves</li>
-              <li class="list-ord-item">Salt</li>
+              <li class="list-ord-item">Salt</li> -->
             </ol>
           </div>
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12">
           <span class="item-head">Measure:</span>
           <div class="item-card">
-            <ul class="list-unord">
-              <li class="list-unord-item">1 large</li>
+            <ul id="mealMesures" class="list-unord">
+              <!-- <li class="list-unord-item">1 large</li>
               <li class="list-unord-item">1/2 cup</li>
               <li class="list-unord-item">1 cup</li>
               <li class="list-unord-item">6 cloves</li>
               <li class="list-unord-item">1/4 teaspoon</li>
               <li class="list-unord-item">1.5 tablespoon</li>
               <li class="list-unord-item">1 tablespoon chopped</li>
-              <li class="list-unord-item">as required</li>
+              <li class="list-unord-item">as required</li> -->
             </ul>
           </div>
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12">
           <span class="item-head">Instructions:</span>
-          <ol class="list-ins">
-            <li class="list-ins-item">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
-              est
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Dicta obcaecati error sint
-              quisquam. Sit facilis dignissimos nisi nemo
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit aperiam
-              sed eius eveniet
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-              nulla amet consequatur molestiae iste voluptatum dolor ea ut
-              aperiam quas
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum dolor sit amet consectetur
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Molestiae enim animi fuga accusamus a facilis culpa. Veniam, odit
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id
-              earum
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-              iure dicta blanditiis delectus necessitatibus quo
-            </li>
-            <li class="list-ins-item">
-              Lorem ipsum dolor sit amet consectetur
-            </li>
-            <li class="list-ins-item">
+          <ol id="instructionsList" class="list-ins">
+            <!-- <li class="list-ins-item">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
               ullam modi nam, sapiente soluta nobis totam ea magnam esse, est,
               deserunt illo repudiandae sint nisi
-            </li>
+            </li> -->
           </ol>
         </div>
       </div>
@@ -279,122 +189,9 @@
     <section class="d-flex flex-column category-section">
       <h4 class="sub-head">CATEGORIES</h4>
       <div class="sub-head-underline"></div>
-      <div class="category-grid">
-        <div class="category-card">
-          <img
-            src="../assets/images/beef.png"
-            class="card-img-top"
-            alt="beef"
-          />
-          <div class="category-badge">BEEF</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/chicken.png"
-            class="card-img-top"
-            alt="chicken"
-          />
-          <div class="category-badge">CHICKEN</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/dessert.png"
-            class="card-img-top"
-            alt="dessert"
-          />
-          <div class="category-badge">DESSERT</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/lamb.png"
-            class="card-img-top"
-            alt="lamb"
-          />
-          <div class="category-badge">LAMB</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/miscellaneous.png"
-            class="card-img-top"
-            alt="miscellaneous"
-          />
-          <div class="category-badge">MISCELLANEOUS</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/pasta.png"
-            class="card-img-top"
-            alt="pasta"
-          />
-          <div class="category-badge">PASTA</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/pork.png"
-            class="card-img-top"
-            alt="pork"
-          />
-          <div class="category-badge">PORK</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/seafood.png"
-            class="card-img-top"
-            alt="seafood"
-          />
-          <div class="category-badge">SEAFOOD</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/side.png"
-            class="card-img-top"
-            alt="side"
-          />
-          <div class="category-badge">SIDE</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/starter.png"
-            class="card-img-top"
-            alt="starter"
-          />
-          <div class="category-badge">STARTER</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/vegan.png"
-            class="card-img-top"
-            alt="vegan"
-          />
-          <div class="category-badge">VEGAN</div>
-        </div>
-        <div class="category-card">
-          <a href="./pages/vegetarian.html">
-            <img
-              src="../assets/images/vegetarian.png"
-              class="card-img-top"
-              alt="vegetarian"
-            />
-            <div class="category-badge">VEGETARIAN</div>
-          </a>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/breakfast.png"
-            class="card-img-top"
-            alt="breakfast"
-          />
-          <div class="category-badge">BREAKFAST</div>
-        </div>
-        <div class="category-card">
-          <img
-            src="../assets/images/goat.png"
-            class="card-img-top"
-            alt="goat"
-          />
-          <div class="category-badge">GOAT</div>
-        </div>
-      </div>
+      <div id="categortGrid" class="category-grid"></div>
     </section>
+    <script src="../JS/meal-details.js"></script>
+    <script src="../JS/index.js"></script>
   </body>
 </html>

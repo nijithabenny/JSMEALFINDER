@@ -39,6 +39,10 @@ body {
     align-items: center;
 }
 
+.nav-link {
+    cursor: pointer;
+}
+
 .offcanvas {
     bottom: 25vh !important;
 }
@@ -296,6 +300,7 @@ a {
     border: 1px solid #e16120;
     border-radius: 4px;
     padding: 2px 6px;
+    margin-right: 4px
 }
 
 .item-color-card {

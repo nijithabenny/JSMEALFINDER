@@ -15,7 +15,7 @@
 - [ ] No horizontal scrolling
 - [ ] Navigation adapts correctly
 - [ ] Initially page lands on index page
-- [ ] Click on 'Vegetarian' under 'Category' and the page redirects to pages/vegetarian
+- [ ] Click on 'Vegetarian' under 'Category' and the page redirects to pages/category
 - [ ] Click on 'Baingan Bharta' under 'Meals' and the page redirects to pages/meal-details
 - [ ] Click on Home icon in Nav bar and the page redirects to index page
 - [ ] Cards stack correctly - 5 cards per row in laptop view
