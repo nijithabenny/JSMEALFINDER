@@ -82,12 +82,13 @@
         <div class="search-txt">
           <form class="d-flex justify-content-center mt-3 search" role="search">
             <input
+              id="searchInput"
               class="form-control me-2 ps-4"
               type="search"
               placeholder="Search recipies here ..."
               aria-label="Search"
             />
-            <button class="btn-search" type="submit">
+            <button id="searchBtn" class="btn-search" type="submit">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
@@ -100,6 +101,11 @@
         </div>
       </section>
     </header>
+
+    <!-- meals section -->
+    <section id="mealsSect" class="d-flex flex-column category-section">
+      <div id="mealsGrid" class="category-grid"></div>
+    </section>
 
     <section class="d-flex flex-column category-section">
       <h4 class="sub-head">CATEGORIES</h4>
