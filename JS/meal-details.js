@@ -1,10 +1,7 @@
-//function to fetch details of selected meal
 sessionStorage.setItem("currentPage", "meals");
-console.log("meals page js", sessionStorage.getItem("currentPage"));
-// selectedMealId
-// selectedMeal
-const ID = sessionStorage.getItem("selectedMealId");
 
+const ID = sessionStorage.getItem("selectedMealId");
+//function to fetch details of selected meal
 async function getMealDetails() {
   try {
     const response = await fetch(
@@ -20,24 +17,31 @@ async function getMealDetails() {
   }
 }
 
-//manipulating DOM to get dynamic details
+//manipulating DOM to get details of selected meal
 getMealDetails().then((mealDetails) => {
-  console.log(mealDetails);
   //meal name
   const breadcrumbHeader = document.querySelectorAll("#breadcrumbHeader");
   breadcrumbHeader[0].textContent = mealDetails.strMeal;
   breadcrumbHeader[1].textContent = mealDetails.strMeal;
+
+  //meal Image
+  const mealThumb = document.getElementById("mealThumb");
+  mealThumb.setAttribute("src", mealDetails.strMealThumb);
+
   //meal category
   const mealCategory = document.getElementById("mealCategory");
   mealCategory.textContent = mealDetails.strCategory;
+
   //meal source
   const mealSource = document.getElementById("strImageSource");
   if (mealDetails.strImageSource) {
     mealSource.textContent = mealDetails.strImageSource;
   }
+
   //meal tags
   const mealTag = document.getElementById("mealTag");
   if (mealDetails.strTags) {
+    //using split to convert string value of tags in to array
     let mealTags = mealDetails.strTags.split(",");
     for (let i of mealTags) {
       const tagEl = document.createElement("span");
@@ -49,8 +53,9 @@ getMealDetails().then((mealDetails) => {
 
   //meal ingredients
   const mealIngredients = document.getElementById("mealIngredients");
+  //making an array of ingredients from different key-value pairs and removing empty/null values
   for (let i of Object.entries(mealDetails)) {
-    if ((i[0].startsWith("strIngredient")) && (i[1].trim())) {
+    if (i[0].startsWith("strIngredient") && i[1].trim()) {
       const ingredient = document.createElement("li");
       ingredient.className = "list-ord-item";
       ingredient.textContent = i[1];
@@ -60,8 +65,9 @@ getMealDetails().then((mealDetails) => {
 
   //meal measure
   const mealMesures = document.getElementById("mealMesures");
+  //making an array of measures from different key-value pairs and removing empty/null values
   for (let i of Object.entries(mealDetails)) {
-    if ((i[0].startsWith("strMeasure")) && (i[1].trim())) {
+    if (i[0].startsWith("strMeasure") && i[1].trim()) {
       const measure = document.createElement("li");
       measure.className = "list-unord-item";
       measure.textContent = i[1];
