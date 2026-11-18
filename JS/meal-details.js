@@ -33,9 +33,9 @@ getMealDetails().then((mealDetails) => {
   mealCategory.textContent = mealDetails.strCategory;
 
   //meal source
-  const mealSource = document.getElementById("strImageSource");
-  if (mealDetails.strImageSource) {
-    mealSource.textContent = mealDetails.strImageSource;
+  const mealSource = document.getElementById("mealSource");
+  if (mealDetails.strSource) {
+    mealSource.textContent = mealDetails.strSource;
   }
 
   //meal tags
